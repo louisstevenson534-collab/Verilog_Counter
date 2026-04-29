@@ -29,11 +29,11 @@ module test;
     
   // Instantiate design under test
   state_cntr U1(
-  .en(en), .clk(clk), .reset(reset), .terminal_count(8'd9), .pulse(pulse_0), .count(count[3:0]) 
+    .en(en), .clk(clk), .reset(reset), .terminal_count(8'd4), .pulse(pulse_0), .count(count[3:0]) 
   );//instantiate counter_fsm.v to test bench for values in the ones place
   
   state_cntr U2(
-  .en(pulse_0), .clk(clk), .reset(reset), .terminal_count(8'd3), .pulse(pulse_1), .count(count[7:4])
+    .en(pulse_0), .clk(clk), .reset(reset), .terminal_count(8'd5), .pulse(pulse_1), .count(count[7:4])
   );//instantiation for tens place that is enabled by the pulse from the ones place reaching d9
   
     initial begin
